@@ -1,0 +1,24 @@
+{
+  "name": "organize-danfe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felipeyukio182/organize-danfe.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/felipeyukio182/organize-danfe/issues"
+  },
+  "homepage": "https://github.com/felipeyukio182/organize-danfe#readme",
+  "dependencies": {
+    "pdf-parse": "^1.1.1"
+  }
+}
