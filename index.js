@@ -31,7 +31,7 @@ async function processarPDF(caminhoArquivo) {
     const cnpj = match[0]?.replace("/", "_");
 
     // Criar pasta se não existir
-    const pastaDestino = path.join(__dirname, 'output', cnpj);
+    const pastaDestino = path.join(process.cwd(), 'output', cnpj);
     if (!fs.existsSync(pastaDestino)) {
       fs.mkdirSync(pastaDestino, { recursive: true });
     }
