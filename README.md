@@ -1,6 +1,6 @@
 # 📂 Separador de PDFs por CNPJ
 
-Este script em Node.js lê todos os arquivos `.pdf` da pasta `pdfs`, identifica o **CNPJ** presente e copia cada PDF para uma subpasta nomeada com o respectivo CNPJ.
+Este script em Node.js lê todos os arquivos `.pdf` da pasta informada, identifica o **CNPJ** presente e copia cada PDF para uma subpasta nomeada com o respectivo CNPJ.
 
 ## 🚀 Como usar
 
@@ -14,6 +14,6 @@ Crie uma pasta chamada pdfs no diretório raiz do projeto e adicione os PDFs que
 
 ### 3. Execute o script
 
-node index.js
+node index.js -p pdfs
 
 Os arquivos serão copiados para a pasta output/<CNPJ>/, de acordo com o CNPJ encontrado em cada PDF.

@@ -3,12 +3,23 @@
 const fs = require('fs');
 const path = require('path');
 const pdf = require('pdf-parse');
+const { Command } = require('commander');
+
+const program = new Command();
+
+program
+  .name('organize-danfe')
+  .description('Organiza DANFe em pastas separadas por CNPJ')
+  .requiredOption('-p, --path <path>', 'Path da pasta que contem os PDFs')
+  .parse(process.argv);
+
+const options = program.opts();
 
 // Regex para identificar CNPJ (formato XX.XXX.XXX/XXXX-XX)
 const cnpjRegex = /\d{2}\.\d{3}\.\d{3}\/\d{4}-\d{2}/;
 
 // Pasta onde estão os PDFs
-const pastaPDFs = path.join(__dirname, 'pdfs');
+const pastaPDFs = path.join(process.cwd(), options.path);
 
 async function processarPDF(caminhoArquivo) {
   const buffer = fs.readFileSync(caminhoArquivo);
